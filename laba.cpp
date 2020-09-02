@@ -1,14 +1,17 @@
 #include <iostream>
-using namespace std;
+#include <math.h>
 int main()
 {
-    int i;
-    int sum = 0;
-    setlocale(0, "");
-    for (i = 1; i <= 100; i++)
-    {
-        sum = sum + i;
-    }
-    cout << "Сумма чисел =" << sum << endl;
+    double x, y, z, a, b, s;
+    cout << "Vvedi x:";
+    cin >> x;
+    cout << "Vvedi y:";
+    cin >> y;
+    cout << "Vvedi z:";
+    cin >> z;
+    a = pow(y + pow(x - 1, 1 / 3.), 1 / 4.);
+    b = fabs(x - y) * (pow(sin(z), 2) + tan(z));
+    s = a / b;
+    cout << "resultat s=" << s << endl;
     return 0;
 }
