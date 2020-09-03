@@ -6,6 +6,7 @@ int main()
 
       double x, y, z, s;
       cout << "Vvedi x: ";
+
       
       cin >> x;
       cout << "Vvedi y: ";
