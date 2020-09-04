@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <time.h>
 #include <math.h>
+#include <string>
 using namespace std;
 
 int main()
@@ -15,30 +16,66 @@ int main()
     my_dynamic_array = new int[size];
 
     int numbers[size];
-    int x, sum, indx;
-    sum = 0;
-    cout << "Vvedite chisla " << endl;
-
-    for (int i = 0; i < size; ++i)
+    int x, sum, indx, count;
+    cout << "Kak zapolnit massiv 1- random 2- s klaviatyry ";
+    cin >> count;
+    switch (count)
     {
-        cin >> numbers[i];
-        x = numbers[0];
-    }
-
-    for (int i = 0; i < size; ++i)
+    case 1:
     {
-        if (x > numbers[i])
+        sum = 0;
+        for (int i = 0; i < size; ++i)
         {
-            x = numbers[i];
-            indx = i + 1;
+            numbers[i] = (rand() % 100) - 50;
+            cout << numbers[i] << " ";
+            x = numbers[0];
         }
-    }
-    for (int i = indx; i < size; ++i)
-    {
-        sum = sum + fabs(numbers[i]);
-    }
-    cout << "Sum is ";
 
-    cout << sum << endl;
+        for (int i = 0; i < size; ++i)
+        {
+            if (abs(x) > abs(numbers[i]))
+            {
+                x = numbers[i];
+                indx = i + 1;
+            }
+        }
+        for (int i = indx; i < size; ++i)
+        {
+            sum = sum + abs(numbers[i]);
+        }
+        cout << "Sum is ";
+
+        cout << sum << endl;
+        break;
+    }
+    case 2:
+    {
+        sum = 0;
+        cout << "Vvedite chisla " << endl;
+
+        for (int i = 0; i < size; ++i)
+        {
+            cin >> numbers[i];
+            x = numbers[0];
+        }
+
+        for (int i = 0; i < size; ++i)
+        {
+            if (abs(x) > abs(numbers[i]))
+            {
+                x = numbers[i];
+                indx = i + 1;
+            }
+        }
+        for (int i = indx; i < size; ++i)
+        {
+            sum = sum + abs(numbers[i]);
+        }
+        cout << "Sum is ";
+
+        cout << sum << endl;
+        break;
+    }
+    }
     return 0;
 }
