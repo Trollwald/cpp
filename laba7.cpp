@@ -9,6 +9,6 @@ int main()
         if ((str[i] - '0') % 2 != 1)
             result += str[i];
     cout << result << endl;
-    system("pause");
+    
     return 0;
 }
