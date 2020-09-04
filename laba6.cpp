@@ -31,10 +31,7 @@ int main()
                 break;
             }
         }
-        if (!sim)
-        {
-            break;
-        }
+    
     }
     cout << ((sim) ? "Matrica simmetrichna" : "Matrica ne simmetrichna") << endl;
 }
