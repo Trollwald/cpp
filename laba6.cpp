@@ -5,15 +5,16 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    int n;
-    cout << "Введите размер матрицы: ";
+
+    int n, i, j;
+    double a[20][20];
+    cout << "Vvedite razmer matrici: ";
     cin >> n;
-    cout << "Введите элементы матрицы " << endl;
-    int **a = new int *[n];
+    cout << "Vvedite elementy matrici" << endl;
+
     for (int i = 0; i < n; i++)
     {
-        a[i] = new int[n];
+
         for (int j = 0; j < n; j++)
         {
             cin >> a[i][j];
@@ -35,5 +36,5 @@ int main()
             break;
         }
     }
-    cout << ((sim) ? "Матрица симметрична относительно побочной диагонали" : "Матрица не симметрична относительно побочной диагонали") << endl;
+    cout << ((sim) ? "Matrica simmetrichna" : "Matrica ne simmetrichna") << endl;
 }
