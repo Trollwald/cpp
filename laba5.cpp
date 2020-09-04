@@ -6,18 +6,26 @@ using namespace std;
 
 int main()
 {
-    int numbers[5];
+    int *my_dynamic_array;
+
+    int size;
+    cout << "Vvedite razmer massiva ";
+    cin >> size;
+
+    my_dynamic_array = new int[size];
+
+    int numbers[size];
     int x, sum, indx;
     sum = 0;
-    cout << "Enter numbers: " << endl;
+    cout << "Vvedite chisla " << endl;
 
-    for (int i = 0; i < 5; ++i)
+    for (int i = 0; i < size; ++i)
     {
         cin >> numbers[i];
         x = numbers[0];
     }
 
-    for (int i = 0; i < 5; ++i)
+    for (int i = 0; i < size; ++i)
     {
         if (x > numbers[i])
         {
@@ -25,7 +33,7 @@ int main()
             indx = i + 1;
         }
     }
-    for (int i = indx; i < 5; ++i)
+    for (int i = indx; i < size; ++i)
     {
         sum = sum + fabs(numbers[i]);
     }
