@@ -30,22 +30,6 @@ int main()
             cout << numbers[i] << " ";
             x = numbers[0];
         }
-
-        for (int i = 0; i < size; ++i)
-        {
-            if (abs(x) > abs(numbers[i]))
-            {
-                x = numbers[i];
-                indx = i + 1;
-            }
-        }
-        for (int i = indx; i < size; ++i)
-        {
-            sum = sum + abs(numbers[i]);
-        }
-        cout << "Sum is ";
-
-        cout << sum << endl;
         break;
     }
     case 2:
@@ -58,8 +42,10 @@ int main()
             cin >> numbers[i];
             x = numbers[0];
         }
-
-        for (int i = 0; i < size; ++i)
+        break;
+    }
+    }
+       for (int i = 0; i < size; ++i)
         {
             if (abs(x) > abs(numbers[i]))
             {
@@ -74,8 +60,5 @@ int main()
         cout << "Sum is ";
 
         cout << sum << endl;
-        break;
-    }
-    }
     return 0;
 }
